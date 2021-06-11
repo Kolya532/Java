@@ -45,7 +45,6 @@ public class Menu {
     * */
 
     public static void TaskOne() {
-
         Scanner scanner = new Scanner(System.in);
         ArrayList<Book> list = new ArrayList<Book>();
         list.add(new Book("Олексій Васильєв ","Програмування мовою python",2011,"Типографія"));
@@ -78,7 +77,6 @@ public class Menu {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
 
 
@@ -118,7 +116,6 @@ public class Menu {
                         break;
                     case "exit":
                         return;
-
                 }
             }
         }

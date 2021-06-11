@@ -1,12 +1,8 @@
 import java.io.*;
-import java.nio.charset.StandardCharsets;
+
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.Random;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Main {
 
@@ -104,14 +100,14 @@ public class Main {
     public static void task2() throws IOException {
         String s = "";
         try {
-            s = new String(Files.readAllBytes(Paths.get("D:\\javaLAB\\laba_2-main\\Laba 2\\g.txt")));
+            s = new String(Files.readAllBytes(Paths.get("g.txt")));
         } catch(IOException e) {
             System.out.println(e);
             System.exit(0);
         }
         s = s.replaceAll("[^aoeuiy]", "");
         System.out.println("Кількість голосних букв: " + s.length());
-        }
+    }
 
 
 
@@ -121,8 +117,8 @@ public class Main {
      * 2.Дано текстовий файл. Видалити з перший нього рядок в кінці якого знаходиться символ "!". Результат записати в новий файл.
      * */
     public static void task3() throws IllegalAccessException {
-        try (BufferedReader inputStream = new BufferedReader(new FileReader("D:\\javaLAB\\laba_2-main\\Laba 2\\input.txt"));
-             PrintWriter outputStream = new PrintWriter(new FileWriter("D:\\javaLAB\\laba_2-main\\Laba 2\\output.txt"))) {
+        try (BufferedReader inputStream = new BufferedReader(new FileReader("input.txt"));
+             PrintWriter outputStream = new PrintWriter(new FileWriter("output.txt"))) {
             String l;
             boolean ok = false;
             while ((l = inputStream.readLine()) != null) {
